@@ -1,0 +1,398 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200;0,300;0,500;0,700;0,800;1,200;1,400;1,600;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    font-family: 'Crimson Pro', serif;
+font-family: 'Poppins', sans-serif;
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+scroll-behavior: smooth;
+  }
+  
+  body{
+    font-family: century gothic;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: #F7F1E5;
+  }
+
+  
+  .header {
+    
+    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),  url(azzaba.jpg);
+    
+    height : 100vh;
+    background-size: cover;
+    background-position: center;
+    font-weight: bold;
+    
+    }
+  
+  ul.menu {
+    list-style-type : none;
+    float : right;
+    margin: 20px;
+  }
+    
+  ul.menu li{
+    display: inline;
+    
+  }
+  
+  #map{
+    height: 75vh; 
+    width: 100%; 
+    margin-top: 1%;
+
+  }
+  ul.menu li a{
+   text-decoration: none;
+    color: white;
+    padding: 5px 25px;
+    border: 1px solid orange;
+    transition: 0.7s ease;
+  }
+  
+  ul li a:hover{
+    background-color: orange;
+    color: black;
+  }
+  
+  #sliders{
+    margin-top:1%;
+    background-color: #000;
+  }
+  .logo{
+    float: left;
+    margin-top: -60px;
+    
+  }
+  
+  .inside{
+    position: absolute;
+    top: 50%;
+    left : 50%;
+    transform: translate(-50%,-50%);
+  }
+  
+  .inside{
+    color : white;
+    font-size: 17px;
+    
+   
+  }
+  
+  .button {
+    
+    position: absolute;
+    top: 60%;
+    left : 50%;
+    transform: translate(-50%,-50%);
+    
+  }
+  
+  .watch {
+    border: 1px solid white;
+    color: white;
+    text-decoration: none;
+    padding : 10px 30px;
+    transition: ease 0.7s;
+  }
+  
+  .watch:hover {
+    background-color: black;
+    color: orange;
+    transform: scale(1.1);
+  }
+  
+  .guide {
+    
+    background-color: rgb(255,237,176);
+    height: 80vh;
+    text-align: center;
+    
+  }
+  
+  #list1 {
+    float : left;
+    width : 45%;
+    
+    text-align:left;
+    
+  
+  }
+  
+  #list2 {
+    float : right;
+    width : 45%;
+    text-align:left;
+    
+    
+  }
+  
+  em{
+    color: red;
+  }
+  
+  .foot {
+    padding: 30px;
+    text-align: center;
+    background: grey;
+    margin-top: 20px;
+  }
+  
+  .aboutmeknes {
+    text-align:center;
+  }
+  
+  
+  
+  
+  
+/* Slider images css*/
+.slider, 
+.slider > div {
+    /* Images default to Center Center. Maybe try 'center top'? */
+    background-position: center center;
+    display: block;
+    width: 100%;
+    height: 500px;
+    /* height: 100vh; *//* If you want fullscreen */
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #000;
+    overflow: hidden;
+    -moz-transition: transform .4s;
+    -o-transition: transform .4s;
+    -webkit-transition: transform .4s;
+    transition: transform .4s;
+}
+
+.slider > div {
+    position: absolute;
+}
+
+.slider > i {
+    color: #5bbd72;
+    position: absolute;
+    font-size: 60px;
+    margin: 20px;
+    top: 40%;
+    text-shadow: 0 10px 2px #223422;
+    transition: .3s;
+    width: 30px;
+    padding: 10px 13px;
+    background: #fff;
+    background: rgba(255, 255, 255, .3);
+    cursor: pointer;
+    line-height: 0;
+    box-sizing: content-box;
+    border-radius: 3px;
+    z-index: 4;
+}
+
+.slider > i svg {
+    margin-top: 3px;
+}
+
+.slider > .left {
+    left: -100px;
+}
+.slider > .right {
+    right: -100px;
+}
+.slider:hover > .left {
+    left: 0;
+}
+.slider:hover > .right {
+    right: 0;
+}
+
+.slider > i:hover {
+    background:#fff;
+    background: rgba(255, 255, 255, .8);
+    transform: translateX(-2px);
+}
+
+.slider > i.right:hover {
+    transform: translateX(2px);
+}
+
+.slider > i.right:active,
+.slider > i.left:active {
+    transform: translateY(1px);
+}
+
+.slider:hover > div {
+    transform: scale(1.01);
+}
+
+.hoverZoomOff:hover > div {
+    transform: scale(1);
+}
+
+.slider > ul {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    z-index: 4;
+    padding: 0;
+    margin: 0;
+    transform: translateX(-50%);
+}
+
+.slider > ul > li {
+    padding: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    list-style: none;
+    float: left;
+    margin: 10px 10px 0;
+    cursor: pointer;
+    border: 1px solid #fff;
+    -moz-transition: .3s;
+    -o-transition: .3s;
+    -webkit-transition: .3s;
+    transition: .3s;
+}
+
+.slider > ul > .showli {
+    background-color: #7EC03D;
+    -moz-animation: boing .5s forwards;
+    -o-animation: boing .5s forwards;
+    -webkit-animation: boing .5s forwards;
+    animation: boing .5s forwards;
+}
+
+.slider > ul > li:hover {
+    background-color: #7EC03D;
+}
+
+.slider > .show {
+    z-index: 1;
+}
+
+.hideDots > ul {
+    display: none;
+}
+
+.showArrows > .left {
+    left: 0;
+}
+
+.showArrows > .right {
+    right: 0;
+}
+
+.titleBar {
+    z-index: 2;
+    display: inline-block;
+    background: rgba(0,0,0,.5);
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    transform: translateY(100%);
+    padding: 20px 30px;
+    transition: .3s;
+    color: #fff;
+}
+
+.titleBar * {
+    transform: translate(-20px, 30px);
+    transition: all 700ms cubic-bezier(0.37, 0.31, 0.2, 0.85) 200ms;
+    opacity: 0;
+}
+
+.titleBarTop .titleBar * {
+    transform: translate(-20px, -30px);
+}
+
+.slider:hover .titleBar,
+.slider:hover .titleBar * {
+    transform: translate(0);
+    opacity: 1;
+}
+
+.titleBarTop .titleBar {
+    top: 0;
+    bottom: initial;
+    transform: translateY(-100%);
+}
+
+.slider > div span {
+    display: block;
+    background: rgba(0,0,0,.5);
+    position: absolute;
+    bottom: 0;
+    color: #fff;
+    text-align: center;
+    padding: 0;
+    width: 100%;
+}
+
+
+@keyframes boing {
+    0% {
+        transform: scale(1.2);
+    }
+    40% {
+        transform: scale(.6);
+    }
+    60% {
+        transform: scale(1.2);
+    }
+    80% {
+        transform: scale(.8);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* -------------------------------------- */
+
+#slider2 {
+    max-width: 30%;
+    margin-right: 20px;
+}
+
+.row2Wrap {
+    display: flex;
+}
+
+.content {
+    padding: 50px;
+    margin-bottom: 100px;
+}
+
+html {
+    height: 100%;
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+h1, h2, h3 {
+    font-family: 'Crimson Text', sans-serif;
+    font-weight: 100;
+}
+body {
+    font: 15px 'Titillium Web', Arial, sans-serif;
+    height: 100%;
+    color: #aaa;
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    padding: 10px 15vw;
+}
+
+  
+  
+  
+  
+  
